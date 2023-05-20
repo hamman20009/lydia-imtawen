@@ -1,0 +1,30 @@
+#tip
+{
+background-color:#e6ffff;
+font-family:Arial;
+font-size:60px;
+font-weight:10px;
+text-align:center;
+font-style:italic;}
+#tid{
+background-color:#e6ffff;
+Line-through:barré;
+}
+img{
+width :150px;
+height :150px;}
+img:hover{
+width :180px;
+height :180px;}
+.prix:active
+{
+font-size:40px;
+}
+h2
+{
+color:#AA00AA;
+}
+#pid{
+color:red;
+font-size:30px;
+}

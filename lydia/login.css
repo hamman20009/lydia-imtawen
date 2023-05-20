@@ -1,0 +1,23 @@
+
+body 
+{
+background-image: url("image21.jpeg");
+background-repeat: no-repeat;
+background-attachement:fixed;
+background-size: cover;
+}
+h1
+{
+text-align: center;
+color:#00FFFF;
+font-size:60px;
+}
+table
+{ 
+margin: auto;
+background-color:#ADD8E6;
+font-size:20px;
+padding-top:30px;
+margin-top:30p%;
+border-radius:20px 20px 20px 20px;
+}

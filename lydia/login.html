@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>page3</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<script>
+function Validation_login()
+{
+var Email = document.getElementById("email");
+var MotPasse = document.getElementById("mot_passe");
+var ValEmail = Email.value;
+var ValMotPasse = MotPasse.value;
+
+if ( ValEmail == "" &&  ValMotPasse == "")
+{
+var ligne = document.getElementById("line");
+ligne.innerHTML="";
+ligne.innerHTML = "<td colspan='2' style='color:red;text-align:center;'>veuillez entrer votre email et votre mot de passe !"
+return false ;
+}
+else if (ValEmail == "")
+{
+var ligne = document.getElementById("line");
+ligne.innerHTML="";
+ligne.innerHTML = "<td colspan='2' style='color:red;text-align:center;'>veuillez entrer votre email !"
+return false ;
+}
+else if (ValMotPasse == "")
+{
+var ligne = document.getElementById("line");
+ligne.innerHTML="";
+ligne.innerHTML = "<td colspan='2' style='color:red;text-align:center;'>veuillez entrer votre mot de passe !"
+return false ;
+}
+else 
+{
+return true ;
+}
+}
+</script>
+<body>
+<h1>Bienveue</h1>
+<h4>BOUBEGRA LYDIA GRP 1</h4>
+<form method="post"action="login.php">
+<table width="60%">
+<tr>
+<td colspan ="2"><input type="image" name="image" alt="login"img src="login_icon.png"></td>
+</tr>
+
+<tr>
+<td>Email:</td>
+<td><input type="email" name="email" id="email"></td>
+</tr>
+<tr id="line"></tr>
+<tr>
+<td>Mot de passe:</td>
+<td><input type="password" name="password" id="mot_passe"></td>
+<tr id="line"></tr>
+</tr>
+
+<tr>
+<td><input type="submit" name="submit" value="send" onclick ="return Validation_login();"></td>
+<td><input type="reset" name="cancel" value="cancel"></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="inscription.html">s'inscrire</a></td>
+</tr>
+</table>
+</body>
+</html>

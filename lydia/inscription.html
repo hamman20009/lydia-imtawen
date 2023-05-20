@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>page1</title>
+<link rel ="stylesheet" href="inscription.css">
+
+</head>
+<script>
+function validation_infos() {
+       var nom = document.getElementById("nom");
+       var prenom = document.getElementById("prenom");
+       var age = document.getElementById("age");
+       var tel = document.getElementById("telephone");
+       var email = document.getElementById("email");
+       var adresse = document.getElementById("Addresse");
+       var mdp = document.getElementById("mdp");
+    
+      /* var confmdp = document.getElementById("Confmdp");
+       var wilaya = document.getElementById("Wilaya");
+       var sexe = document.getElementsByClassName("Sexe");*/
+       var val_nom = nom.value;
+       val_prenom = prenom.value;
+       val_age = age.value;
+       val_tel = tel.value;
+       val_email = email.value;  
+       val_adresse = adresse.value;
+       val_mdp = mdp.value; 
+       /* val_confmdp = confmdp.value;
+
+     val_wilaya = wilaya.value;
+
+    var val_sexe = sexe.value;
+    for(i = 0; i < sexe.length; i++) {
+        if (sexe[i].checked) {
+            val_sexe = sexe[i].value;
+        }
+    }*/
+   /* if(val_nom == "" && val_prenom == "" && val_age == "" && val_tel == "" && Valemail=="" && val_adresse == "" && Valmdp=="" && val_confmdp == "" ){
+        alert("veuillez entrer votre nom,prenom,age, telephone, email,addresse,mdp et confmdp!");
+        return false;
+    }*/
+
+    if(val_nom == "") {
+        alert("veuillez entrer votre nom !");
+        return false;
+    }
+   if (val_prenom == "") {
+        alert("veuillez entrer votre prenom !");
+        return false;
+    }
+   if (val_age == "") {
+        alert("l'age est une valeur numerique entre 17 et 100 !");
+        return false;
+    }
+    if(val_tel == "") {
+        alert("le numero de telephone se compose de 9 ou 10 chiffres!");
+        return false;
+    }
+     if (val_email == "") {
+        alert("veuillez entrer votre email !");
+        return false;
+    }
+     if (val_adresse == "") {
+        alert("veuillez entrer votre adresse !");
+        return false;
+    }
+     if (val_mdp == "") { 
+        alert("le mot de passe doit etre compose d'au moins 8 caractere !"); 
+        return false; 
+    } 
+  /*  if (val_confmdp == "") {
+        alert("le mot de passe et la confirmation sont different !");
+        return false;
+    }*/
+}
+</script>
+<body>
+<h3>LYDIA BOUBEGRA GRP 1</h3>
+<table width="700px">
+<tr><td COLspan="2" ><h1  style="font-size:70px"> créer un compte</h1></td>
+</tr>
+<form methode="post" action="inscription.php">
+<tr>
+<td>nom:</td>
+<td><input type="text" name="nom" size="50" id="nom"></td>
+</tr>
+<tr>
+<td>prenom:</td>
+<td><input type="text" name="prenom" size="50" id="prenom"> </td>
+</tr>
+<tr>
+<td>age:</td>
+<td><input type="text" name="age"  size="50"id="age"> </td>
+</tr>
+<tr>
+<td>wilaya</td>
+<td><SELECT name="Wilaya">
+<OPTION value="Adrar">Adrar</OPTION>
+<OPTION value="Chlef">Chlef</OPTION>
+<OPTION value="Laghouat">Laghouat</OPTION>
+<OPTION value="Oum Bouaghi">Oum Bouaqi</OPTION>
+<OPTION value="Batna">Batna</OPTION>
+<OPTION value="Béjaia">Béjaia</OPTION>
+<OPTION value="Biskra">Biskra</OPTION>
+<OPTION value="Béchar">Béchar</OPTION>
+<OPTION value="Blida">Blida</OPTION>
+<OPTION value="Bouira">Bouira</OPTION>
+<OPTION value="Tamanrasse">Tamanrasset</OPTION>
+<OPTION value="Tébessa">Tébessa</OPTION>
+<OPTION value="Tlemcen">Tlemcen</OPTION>
+<OPTION value="Tiaret">Tiaret</OPTION>
+<OPTION value="Tizi Ouzou">Tizi Ouzou</OPTION>
+<OPTION value="Alger">Alger</OPTION>
+<OPTION value="djelfa">djelfa</OPTION>
+<OPTION value="Jijel">Jijel</OPTION>
+<OPTION value="Sétif">Sétif</OPTION>
+<OPTION value="Saida">Saida</OPTION>
+<OPTION value="Skikda">Skikda</OPTION>
+<OPTION value="Sidi Bel Abbas">Sidi Bel Abbas</OPTION>
+<OPTION value="Annaba">Annaba</OPTION>
+<OPTION value="Guelma">Guelma</OPTION>
+<OPTION value="Constantine">Constantine</OPTION>
+<OPTION value="Médéa">Médéa</OPTION>
+<OPTION value="Mostaganem">Mostaganem</OPTION>
+<OPTION value="Msila">Msila</OPTION>
+<OPTION value="Mascara">Mascara</OPTION>
+<OPTION value="Ouargla">Ouargla</OPTION>
+<OPTION value="Adrar">Oran</OPTION>
+<OPTION value="El Bayadh">El Bayadh</OPTION>
+<OPTION value="Illizi">Illizi</OPTION>
+<OPTION value="Bordj Bou Arreidj">Bordj Bou Arreidj</OPTION>
+<OPTION value="Boumerdés">Boumerdas</OPTION>
+<OPTION value="ElTarf">ElTarf</OPTION>
+<OPTION value="Tindouf">Tindouf</OPTION>
+<OPTION value="Tissemsilt">Tissemsilt</OPTION>
+<OPTION value="El Oued">El Oued</OPTION>
+<OPTION value="Khenchela">Khenchela</OPTION>
+<OPTION value="Souk Ahras">Souk Ahras</OPTION>
+<OPTION value="Tipaza">Tipaza</OPTION>
+<OPTION value="Mila">Mila</OPTION>
+<OPTION value="Ain Defla">Ain Defla</OPTION>
+<OPTION value="Naama">Naama</OPTION>
+<OPTION value="Ain Témouchent">Ain Témouchent</OPTION>
+<OPTION value="Ghardaia">Ghardaia</OPTION>
+<OPTION value="Relizan">Relizan</OPTION>
+</SELECT>
+</td>
+</tr>
+<tr>
+<td>telephone:</td>
+<td><input type="number" name="tel" size="50" id="telephone"></td>
+</tr>
+<tr>
+<td>email:</td>
+<td><input type="email" name="email" size="50"  id="email"></td>
+</tr>
+<tr>
+<td>adresse: </td>
+<td><textarea rows="5"cols="50""name=adresse" id="Addresse"</td>
+</textarea>
+</tr>
+<tr>
+<td>mot de pass</td>
+<td> <input type="password" name="mdp"  size="50"id="mdp"></td>
+</tr>
+<tr>
+<td>confirmer mot de pass</td>
+<td><input type="password" name="confmdp"  size="50"id="confmdp"></td>
+</tr>
+<tr>
+<td>sexe:</td>
+<td>Homme<input type="radio" name="sexe"value="Homme" class="sexe" checked>
+    Femme<input type="radio" name="sexe"value="Femme" class="sexe">
+</td>
+</tr>
+<tr>
+<td> </td>
+<td><input type="submit"value="envoyer" onclick= "return validation_infos();">
+<input type="submit"value="effacer"
+</td>
+</tr>
+</form>
+</table>
+</body>
+</html>

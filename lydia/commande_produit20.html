@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>page </title>
+<link rel ="stylesheet" href= "commande_produit.css">
+</head>
+<script>
+function validation_commande()
+{
+var couleur = document.getElementsByClassName("couleur");
+var quantite = document.getElementById("quantie");
+
+var val_quantite = quantite.value;
+
+var val_couleur ="";
+
+for(var i=0; i < couleur.length;i++)
+{ 
+if (couleur[i].checked)
+{
+val_couleur = val_couleur+" "+couleur[i].value+". ";
+}
+if(confirm("couleurs selectionnees : "+val_couleur+"\nConfirmez votre choix?") == false)
+{
+return false;
+}else if(confirm("quantite a acheter : "+val_quantite+"\nConfirmez votre choix?") == false)
+{return false;}
+else {return true;}
+}
+</script>
+<body>
+<form method="post"action="commande_produit.php">
+<h3>BOUBEGRA LYDIA GRP 1</h3>
+<h1>commander le produit</h1>
+<table width="50%">
+<tr>
+<td rowspan ="6">
+<img src="image20.jpg" width ="300px" hight ="300px">
+</td>
+<td>
+Vendeur:
+</td>
+<td>
+<input  disabled type="text" name="vendeur" value ="Lydiabob" />
+</td>
+</tr>
+<td>
+Prix:
+</td>
+<td>
+<input  disabled type="text" name="prix" value ="100.000 DA" />
+</td>
+</tr>
+<td>
+Ref:
+</td>
+<td>
+<input disabled type="text" name="ref" value ="AZERTYX" />
+</td>
+</tr>
+<td>
+<label>Couleur:</label><br>
+</td>
+<td>
+<input type="checkbox" name="couleur[]" value="BLANC" >BLANC<br>
+<input type="checkbox" name="couleur[]" value="ROUGE" >ROUGE<br>
+<input type="checkbox" name="couleur[]" value="VERT"  >VERT<br>
+<input type="checkbox" name="couleur[]" value="NOIRE" >NOIRE<br>
+<input type="checkbox" name="couleur[]" value="ROSE"  >ROSE<br>
+</td>
+</tr>
+<tr id="couleur">             </tr>
+<td>
+Quantité:
+</td>
+<td>
+<SELECT name="quantité">
+<OPTION value="1" id="quantie">1</OPTION>
+<OPTION value="2" id="quantie">2</OPTION>
+<OPTION value="3" id="quantie">3</OPTION>
+<OPTION value="4" id="quantie">4</OPTION>
+<OPTION value="5" id="quantie">5</OPTION>
+<OPTION value="6" id="quantie">6</OPTION>
+<OPTION value="7" id="quantie">7</OPTION>
+<OPTION value="8" id="quantie">8</OPTION>
+<OPTION value="9" id="quantie">9</OPTION>
+<OPTION value="10" id="quantie">10</OPTION>
+</td>
+</tr>
+<td>
+
+</td>
+<td><input type="submit"value="commander" onclick="return confirm('vous etes sur de cette la quantite??')"></td>
+</tr>
+</forme>
+</table>
+</body>
+</html>
